@@ -11,7 +11,7 @@ image = Image.open('i1.jpg')
 font_type = ImageFont.truetype('Sanskr.ttf', 38, encoding="unic")
 #whatsApp name
 name = 'bro'
-invite1 = 'jayesh'
+invite1 = 'Mayur'
 invite2 = 'chaudhary'
 
 printInvite1 = translator.translate(invite1, dest='hi')
@@ -31,11 +31,11 @@ im3 = image3.convert('RGB')
 
 imagelist = [im2, im3]
 
-os.chdir('C:\\Users\\Jayesh Choudhary\\Desktop\\reena')
+os.chdir('C:\\Users\\mayur Choudhary\\Desktop\\mayur')
 os.mkdir(name1)
 os.chdir(name1)
 path1=Path().absolute()
-image.save('Reena weds Chetanji.pdf', save_all=True, append_images=imagelist)
+image.save('file.pdf', save_all=True, append_images=imagelist)
 #---------------------------------------------------------------------
 
 
@@ -43,7 +43,7 @@ driver = webdriver.Chrome()
 driver.get('https://web.whatsapp.com/')
 
 
-filepath = 'Reena weds Chetanji.pdf'
+filepath = 'file.pdf'
 
 input('Enter anything after scanning QR code')
 
