@@ -4,23 +4,47 @@ from time import sleep
 from selenium import webdriver
 import os
 from pathlib import Path
-
-
 translator = Translator()
-image = Image.open('i1.jpg')
+
+def person1(fn, ln):
+    invite1 = fn
+    invite2 = ln
+
+    printInvite1 = translator.translate(invite1, dest='hi')
+    printInvite2 = translator.translate(invite2, dest='hi')
+    name1 = printInvite1.text + ' ' + printInvite2.text+' ,'
+    draw.text(xy=(350, 617), text=name1, fill=(218, 37, 28), font=font_type)
+
+def person2(fn, ln):
+    invite3 = fn
+    invite4 = ln
+    printInvite3 = translator.translate(invite3, dest='hi')
+    printInvite4 = translator.translate(invite4, dest='hi')
+    name2 = printInvite3.text + ' ' + printInvite4.text
+    draw.text(xy=(540, 617), text=name2, fill=(218, 37, 28), font=font_type)
+
+def person3(fn,ln):
+    invite5 = fn
+    invite6 = ln
+    printInvite5 = translator.translate(invite5, dest='hi')
+    printInvite6 = translator.translate(invite6, dest='hi')
+    name3 = printInvite5.text + ' ' + printInvite6.text
+    draw.text(xy=(350, 670), text=name3, fill=(218, 37, 28), font=font_type)
+
+image = Image.open('i1.jpeg')
 font_type = ImageFont.truetype('Sanskr.ttf', 38, encoding="unic")
 #whatsApp name
 name = 'bro'
-invite1 = 'Mayur'
-invite2 = 'chaudhary'
-
-printInvite1 = translator.translate(invite1, dest='hi')
-printInvite2 = translator.translate(invite2, dest='hi')
-name1 = printInvite1.text+' '+printInvite2.text
-#print(name1)
 
 draw = ImageDraw.Draw(image)
-draw.text(xy=(250, 420), text=name1, fill=(214, 75, 56), font=font_type)
+#print(name1)
+person1('jayesh', 'chaudhary')
+person2('mayur', 'chaudhary')
+person3('champak', 'chaudhary')
+
+
+draw.text(xy=(600, 670), text='सह परिवार', fill=(218, 37, 28), font=font_type)
+image.show()
 
 image2 = Image.open('i2.jpg')
 image3 = Image.open('i3.jpg')
